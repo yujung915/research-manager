@@ -6,6 +6,13 @@ import numpy as np
 from scipy.signal import savgol_filter
 from hashlib import sha256
 from io import BytesIO
+import shutil
+st.download_button(
+    "Download Database",
+    data=open("experiment_manager.db", "rb").read(),
+    file_name="experiment_manager.db"
+)
+
 
 # NumPy 2.0 이상 호환
 np.Inf = np.inf
